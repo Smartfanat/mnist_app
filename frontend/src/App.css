@@ -1,0 +1,102 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.canvas-container {
+  margin-top: 20px;
+  border: 2px dashed #ccc; /* Visual guide around the canvas */
+  display: inline-block; /* Prevents container from stretching */
+  background-color: white; /* Ensure background for the container */
+}
+
+/* Style the canvas itself if needed, though border is on the container now */
+canvas {
+  display: block; /* Prevents extra space below canvas */
+}
+
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.results {
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  min-width: 250px;
+}
+
+.results h2 {
+    margin-bottom: 15px;
+}
+
+.prediction-digit {
+  font-size: 3em;
+  font-weight: bold;
+  color: #28a745; /* Green for success */
+}
+
+.error-message {
+  margin-top: 20px;
+  color: #dc3545; /* Red for errors */
+  font-weight: bold;
+  border: 1px solid #dc3545;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f8d7da;
+}
+
+.probabilities {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.probabilities h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.probabilities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.probabilities li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
